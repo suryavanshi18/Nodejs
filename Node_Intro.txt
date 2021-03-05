@@ -1,0 +1,82 @@
+https://www.youtube.com/watch?v=ipnWAKoiBtY
+
+Node is not a framework/programming language->It is a runtime env for executing Javascript code
+We use Node to build backend services called API
+	API(Application programming Interface) power client application
+Node.js is a javascript runtime built on Chrome V8,javascript engine for executing javascript code
+It's written in C++
+Helpful in building high scalable,data intensive apps
+Node uses EventQueue
+We can run javascript code outside of browser
+
+	JSCode->JS Engine->Machine Code
+		   |
+		    Browser
+		    |
+		Chrome Node.exe  
+		  v8     v8
+Every broweser has javascript Engine
+Node js can also be run on server
+C++ code embedded in V8 engine->Node.js
+Node.js runs single threaded,non blocking,asynchronously
+programming,which is very memory efficient
+
+On the other hand, using a non-blocking request, you can initiate a data request for user2 without waiting for the response to the request for user1.
+ You can initiate both requests in parallel.
+This non-blocking I/O eliminates the need for multi-threading since the server can handle multiple requests at the same time.
+Donot use node for CPU intensive application
+
+Node REPL->Read-Eval-Print-Loop (REPL) is an interactive shell that processes Node. js expressions. 
+	The shell reads JavaScript code the user enters, evaluates the result of interpreting the line of code, 
+	prints the result to the user, and loops until the user signals to quit. 
+
+package.json
+	setup and config your proj
+		add scripts,dependencies
+	npm init->series of ques
+		takes first file alphabetically
+	npm config set init.licencse MIT //Changing licnese setting,reflected using npmrc file
+	npm init --y //using defaults
+	When we add dependencies node module folder is created
+	keeps versions tree of the Project dependencies
+
+If there are large JS Application,it becomes cumbersome to write entire code in single file
+Hence we use CommonnJS API,which defines a format that can be used for breaking youe JS application
+into multiple files
+
+Node modules and types
+	file based modules(require function is used to import)
+	Core Modules(Built in)
+	External Node Modules(third party)
+		Installed using NPM
+	In modules we can export single function or object
+	Node doesn't execute our code directly->It wraps our code in a module
+
+Packages are stored in node_modules
+All dependencies are listed in packages.json	
+
+Http method(Hyper Text Transfer Protocol)
+	Communication between web server and client
+	GET->getting info from server
+	PUT->update data on server
+	POST->submit data to server
+	DELETE->del
+	Idempotent->Even if you do 10 times it will not affect the server
+		POST is not idempotent
+	Every request is independent
+	Http is stateless
+	Http Status code
+		1xx:Information->Request receive/processing
+		2xx:success
+		3xx:redirect
+		4xx:Client error
+		5xx:server error
+		200-ok
+		201-ok created
+		301-moved to new url
+		304-not modified
+		400-bad req
+		401-unauthorized
+		404-not found
+		500-internal server error
+	
